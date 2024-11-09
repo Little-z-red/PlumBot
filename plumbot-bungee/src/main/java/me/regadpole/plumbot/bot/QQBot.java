@@ -79,7 +79,7 @@ public class QQBot implements Bot {
             dispatchers.start(10);//线程组处理任务
             List<Long> groups = Config.getGroupQQs();
             for (long groupID : groups) {
-                PlumBot.getBot().sendMsg(true, "PlumBot已启动", groupID);
+                PlumBot.getBot().sendMsg(true, "机器人已启动", groupID);
             }
         });
     }
@@ -89,7 +89,7 @@ public class QQBot implements Bot {
         QQBot bot = (QQBot) PlumBot.getBot();
         List<Long> groups = Config.getGroupQQs();
         for (long groupID : groups) {
-            bot.sendGroupMsg( "PlumBot已关闭", groupID);
+            bot.sendGroupMsg( "机器人已关闭", groupID);
         }
         connection.stop();
     }
